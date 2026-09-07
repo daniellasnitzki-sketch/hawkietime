@@ -1,0 +1,320 @@
+/* ---------------------------------------------------------------
+   HawkieTime.com — base styles
+   Bold, confident, single-page fan site. No frameworks, no build.
+------------------------------------------------------------------ */
+
+:root {
+  --brown-950: #170c06;
+  --brown-900: #241209;
+  --brown-800: #3a1f10;
+  --brown-700: #4d2a16;
+  --gold-500: #d3a24a;
+  --gold-400: #e9bd63;
+  --gold-300: #f4d48c;
+  --cream: #f6ecdc;
+  --muted: rgba(246, 236, 220, 0.62);
+  --max-width: 720px;
+
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--brown-950);
+  color: var(--cream);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle diagonal stripe texture — evokes a guernsey without any logo */
+.stripes {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(211, 162, 74, 0.05) 0px,
+    rgba(211, 162, 74, 0.05) 2px,
+    transparent 2px,
+    transparent 64px
+  );
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  padding: clamp(16px, 4vw, 28px) clamp(16px, 5vw, 40px) 0;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  letter-spacing: 0.06em;
+  color: var(--cream);
+}
+
+.wordmark-accent {
+  color: var(--gold-500);
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(24px, 6vw, 48px) clamp(16px, 6vw, 40px) clamp(32px, 6vw, 56px);
+  gap: clamp(20px, 4vw, 32px);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--gold-400);
+  text-transform: uppercase;
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 8.5vw, 4.6rem);
+  color: var(--cream);
+}
+
+.headline .accent {
+  color: var(--gold-500);
+}
+
+/* --- Countdown --- */
+
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(6px, 2.2vw, 18px);
+  width: 100%;
+}
+
+.cd-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--brown-900);
+  border: 1px solid var(--brown-700);
+  border-radius: 12px;
+  padding: clamp(8px, 2.5vw, 18px) clamp(6px, 2.5vw, 16px);
+  min-width: 0;
+  flex: 1 1 0;
+  max-width: 150px;
+}
+
+.cd-number {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.9rem, 9vw, 4rem);
+  line-height: 1;
+  color: var(--gold-500);
+}
+
+.cd-label {
+  margin-top: clamp(4px, 1.2vw, 10px);
+  font-size: clamp(0.55rem, 2vw, 0.8rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.cd-sep {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 7vw, 3.4rem);
+  color: var(--brown-700);
+  line-height: 1;
+  align-self: center;
+  transform: translateY(-8%);
+}
+
+/* --- Post countdown state --- */
+
+.post-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 3vw, 20px);
+}
+
+.post-countdown h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 8.5vw, 4.6rem);
+  line-height: 1.04;
+  color: var(--gold-500);
+  letter-spacing: -0.01em;
+}
+
+.post-countdown p {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--muted);
+}
+
+/* --- Game details --- */
+
+.game-details {
+  margin-top: clamp(4px, 2vw, 12px);
+  padding-top: clamp(20px, 4vw, 32px);
+  border-top: 1px solid var(--brown-700);
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(14px, 3vw, 20px);
+}
+
+.matchup {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 4.2vw, 1.75rem);
+  letter-spacing: 0.01em;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.matchup .vs {
+  color: var(--gold-400);
+  font-size: 0.7em;
+  margin: 0 0.35em;
+}
+
+.opponent-slot {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.tbc-badge {
+  display: inline-flex;
+  width: 0.95em;
+  height: 1.12em;
+  vertical-align: middle;
+  transform: translateY(-0.03em);
+}
+
+.tbc-badge svg {
+  width: 100%;
+  height: 100%;
+}
+
+.opponent-name {
+  color: var(--cream);
+}
+
+.details-list {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 2.5vw, 18px) clamp(16px, 4vw, 32px);
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+}
+
+.detail-row dt {
+  font-size: clamp(0.62rem, 1.8vw, 0.72rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  font-weight: 700;
+}
+
+.detail-row dd {
+  margin: 0;
+  font-size: clamp(0.85rem, 2.6vw, 1.05rem);
+  font-weight: 600;
+  color: var(--cream);
+}
+
+/* --- Footer --- */
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  padding: clamp(16px, 4vw, 24px) clamp(16px, 6vw, 40px) clamp(20px, 4vw, 28px);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(246, 236, 220, 0.4);
+}
+
+/* --- Small screens: keep 4 countdown units on one row, never wrap --- */
+@media (max-width: 380px) {
+  .countdown {
+    gap: 4px;
+  }
+  .cd-unit {
+    padding: 8px 4px;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 640px) {
+  .details-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
