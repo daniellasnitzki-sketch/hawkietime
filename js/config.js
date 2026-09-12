@@ -21,8 +21,8 @@ const HAWKIE_CONFIG = {
   // Flip `confirmed` to true and set `name` once the opponent is set —
   // no other file needs to change.
   opponent: {
-    name: "To be confirmed",
-    confirmed: false,
+    name: "Brisbane",
+    confirmed: true,
   },
   round: "Preliminary Final",
   venue: "MCG",
