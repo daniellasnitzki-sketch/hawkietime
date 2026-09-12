@@ -29,12 +29,12 @@ const HAWKIE_CONFIG = {
 
   // ISO 8601 datetime WITH UTC offset. Date is still a placeholder —
   // confirm once the fixture is locked in. Kickoff time/venue confirmed.
-  kickoffISO: "2026-09-19T19:40:00+10:00",
+  kickoffISO: "2026-09-19T17:15:00+10:00",
 
   // Human-readable strings shown under the countdown (kept separate
   // from kickoffISO so display formatting can differ from the ISO value).
   displayDate: "Saturday 19 September 2026",
-  displayKickoff: "7:40 PM AEST (Melbourne)",
+  displayKickoff: "5:15 PM AEST (Melbourne)",
 
   // Shown once the countdown reaches zero. Safe to edit any time.
   postCountdownHeadline: "IT'S HAWKIE TIME.",
