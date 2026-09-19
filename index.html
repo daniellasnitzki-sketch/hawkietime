@@ -68,6 +68,20 @@
     <p id="post-subtext">Go Hawks.</p>
   </section>
 
+  <section id="scoreboard" class="scoreboard" hidden aria-label="Live score">
+    <span class="score-status" id="score-status">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="score-status-text">LIVE</span>
+    </span>
+    <div class="score-row">
+      <span class="score-team-name">HAWTHORN</span>
+      <span class="score-value" id="score-home">0</span>
+      <span class="score-divider">–</span>
+      <span class="score-value" id="score-away">0</span>
+      <span class="score-team-name" id="score-away-name">BRISBANE</span>
+    </div>
+  </section>
+
   <section class="game-details" aria-label="Match details">
     <p class="matchup">
       HAWTHORN <span class="vs">vs</span>
@@ -108,5 +122,6 @@
 
 <script src="/js/config.js"></script>
 <script src="/js/countdown.js"></script>
+<script src="/js/livescore.js"></script>
 </body>
 </html>
