@@ -39,4 +39,9 @@ const HAWKIE_CONFIG = {
   // Shown once the countdown reaches zero. Safe to edit any time.
   postCountdownHeadline: "IT'S HAWKIE TIME.",
   postCountdownSubtext: "Go Hawks.",
+
+  // Live score, once kickoff has passed. This is the Squiggle
+  // (api.squiggle.com.au) game ID for this exact match — set to null
+  // to turn the live scoreboard off entirely (e.g. between seasons).
+  squiggleGameId: 38727,
 };
