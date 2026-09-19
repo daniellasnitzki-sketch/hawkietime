@@ -202,6 +202,73 @@ body {
   color: var(--muted);
 }
 
+/* --- Live scoreboard --- */
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 2vw, 16px);
+  padding: clamp(16px, 3vw, 24px) clamp(20px, 5vw, 40px);
+  background: var(--brown-900);
+  border: 1px solid var(--brown-700);
+  border-radius: 16px;
+}
+
+.score-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--gold-400);
+  text-transform: uppercase;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-500);
+  animation: live-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.score-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 16px);
+  flex-wrap: nowrap;
+}
+
+.score-team-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(0.85rem, 3vw, 1.2rem);
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.score-value {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  color: var(--gold-500);
+  line-height: 1;
+}
+
+.score-divider {
+  color: var(--brown-700);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+}
+
 /* --- Game details --- */
 
 .game-details {
