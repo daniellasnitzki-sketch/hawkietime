@@ -44,4 +44,25 @@ const HAWKIE_CONFIG = {
   // (api.squiggle.com.au) game ID for this exact match — set to null
   // to turn the live scoreboard off entirely (e.g. between seasons).
   squiggleGameId: 38727,
+
+  // Once this match reaches full time, season.js checks the winner and
+  // switches automatically to one of the two states below — no reload,
+  // no manual step. If Hawthorn wins, the countdown restarts targeting
+  // this Grand Final. If not, the season-over message displays instead.
+  grandFinal: {
+    opponent: "Fremantle",
+    round: "Grand Final",
+    venue: "MCG",
+    kickoffISO: "2026-09-26T14:30:00+10:00",
+    displayDate: "Saturday 26 September 2026",
+    displayKickoff: "2:30 PM AEST (Melbourne)",
+    postCountdownHeadline: "IT'S GRAND FINAL TIME.",
+    postCountdownSubtext: "Go Hawks.",
+  },
+
+  // Shown instead, in place of the countdown, if Hawthorn loses.
+  seasonOverMessage: {
+    headline: "HAWKIETIME IS OVER FOR 2026",
+    subtext: "Bigger, better, and Hawkier in 2027.",
+  },
 };
