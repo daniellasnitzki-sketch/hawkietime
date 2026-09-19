@@ -6,7 +6,7 @@
  * fails, rather than showing a broken UI.
  */
 (function () {
-  if (!window.HAWKIE_CONFIG || !HAWKIE_CONFIG.squiggleGameId) return;
+  if (typeof HAWKIE_CONFIG === "undefined" || !HAWKIE_CONFIG.squiggleGameId) return;
 
   const kickoffMs = new Date(HAWKIE_CONFIG.kickoffISO).getTime();
   const gameId = HAWKIE_CONFIG.squiggleGameId;
