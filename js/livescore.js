@@ -43,6 +43,9 @@
     if (data.complete >= 100) {
       setStatus(data.timestr || "FULL TIME");
       stopPolling();
+      if (window.HAWKIE_ON_FULL_TIME) {
+        window.HAWKIE_ON_FULL_TIME(data.winner);
+      }
     } else if (data.timestr) {
       setStatus(data.timestr.toUpperCase());
     } else {
