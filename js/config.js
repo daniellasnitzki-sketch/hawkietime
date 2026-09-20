@@ -63,6 +63,6 @@ const HAWKIE_CONFIG = {
   // Shown instead, in place of the countdown, if Hawthorn loses.
   seasonOverMessage: {
     headline: "HAWKIETIME IS OVER FOR 2026",
-    subtext: "Bigger, better, and Hawkier in 2027.",
+    subtext: "Bigger, Better, and Hawkier in 2027.",
   },
 };
